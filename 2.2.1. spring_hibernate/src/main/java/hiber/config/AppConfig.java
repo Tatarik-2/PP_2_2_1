@@ -23,8 +23,12 @@ import java.util.Properties;
 @ComponentScan(value = "hiber")
 public class AppConfig {
 
-   @Autowired
+//   @Autowired убрал, сделал через конструктор
    private Environment env;
+
+   AppConfig(Environment env){
+      this.env = env;
+   }
 
    @Bean
    public DataSource getDataSource() {

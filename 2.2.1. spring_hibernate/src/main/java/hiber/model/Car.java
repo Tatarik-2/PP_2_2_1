@@ -15,18 +15,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-
-    @OneToOne
-//            (mappedBy = "car")
-    private User user;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+    //убрал Юзера
 
     public Car() {
     }
